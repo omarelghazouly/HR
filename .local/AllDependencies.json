@@ -30029,15 +30029,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\trainee9\\.nuget\\packages\\": {}
+    "C:\\Users\\gha3o\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "BlankProcess14",
       "projectName": "BlankProcess14",
-      "projectPath": "C:\\Users\\trainee9\\Documents\\UiPath\\BlankProcess14\\.local",
-      "packagesPath": "C:\\Users\\trainee9\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\trainee9\\Documents\\UiPath\\BlankProcess14\\.local",
+      "projectPath": "C:\\Users\\gha3o\\Desktop\\HR\\.local",
+      "packagesPath": "C:\\Users\\gha3o\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gha3o\\Desktop\\HR\\.local",
       "UsingMicrosoftNETSdk": false,
       "restoreAuditProperties": {
         "enableAudit": "False"
@@ -30102,7 +30102,7 @@
             "version": "[25.10.13, 25.10.13]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\trainee9\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\gha3o\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

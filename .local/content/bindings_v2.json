@@ -1,0 +1,42 @@
+{
+  "version": "2.0",
+  "resources": [
+    {
+      "activityDisplayName": "Download Storage File",
+      "activityId": "DownloadStorageFile_1",
+      "resource": "bucket",
+      "key": "hr-cv-bucket",
+      "id": "buckethr-cv-buckethr-cv-bucketFalse",
+      "value": {
+        "name": {
+          "defaultValue": "hr-cv-bucket",
+          "isExpression": false,
+          "displayName": "Storage Bucket Name"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2"
+      }
+    },
+    {
+      "activityDisplayName": "Send Email",
+      "activityId": "SendEmailConnections_1",
+      "resource": "Connection",
+      "key": "54baf92f-3590-40e2-8fdf-b30a713283f4",
+      "id": "Connection54baf92f-3590-40e2-8fdf-b30a713283f454baf92f-3590-40e2-8fdf-b30a713283f4False",
+      "value": {
+        "ConnectionId": {
+          "defaultValue": "54baf92f-3590-40e2-8fdf-b30a713283f4",
+          "isExpression": false,
+          "displayName": "Connection",
+          "description": "The connection to be used"
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "Connector": "uipath-google-gmail",
+        "UseConnectionService": "True"
+      }
+    }
+  ]
+}
