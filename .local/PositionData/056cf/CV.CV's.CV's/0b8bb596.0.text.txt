@@ -1,0 +1,38 @@
+Youssef Soliman
+
+RPA Developer * Age: 21
+
+Email: youssef.soliman4@example.com | Phone: +20 15528063532 | LinkedIn: linkedin.com/in/youssefsoliman
+
+Professional Summary
+
+RPA Developer with hands-on experience building robust automations in UiPath: end-to-end workflows, queue-driven designs, and resilient selector strategies.
+Proven ability to deploy, monitor, and maintain automations via Orchestrator with strong documentation and testing.
+
+Skills
+
+UiPath Studio (Classic/Modern), REFramework, Orchestrator (Queues, Triggers, Assets), Document Understanding (OCR, Taxonomy Manager), API integration (HTTP Request), Selectors & Computer Vision, DataTables & Excel activities, Error handling & retry, Version control (Git), VB.NET/C#, SQL basics
+
+Experience
+
+RPA Developer - Project A (2024-Present) * Designed and built unattended automations using REFramework with clear state transitions and retries.
+* Integrated Orchestrator Queues and Assets to scale workload and secure credentials.
+* Implemented Document Understanding pipelines (Digitize, Classify, Extract, Validate).
+
+RPA Developer Intern - Project B (2023-2024) * Developed resilient UI automations using strict/fuzzy selectors and CV for virtualized apps.
+* Built REST integrations with HTTP Request activities for third-party systems.
+* Maintained clean project structure with reusable workflows and arguments.
+
+Education
+
+B.Sc. in Computer & Information Systems (or equivalent), 2023
+
+Certifications
+
+* UiPath Automation Developer Professional * UiPath Document Understanding * UiPath Orchestrator for RPA Developers
+
+Additional
+
+Tools: UiPath, Excel, SQL Server, Git, Postman, VS Code
+
+Application: AP-72005 | Age: 21 | Generated: 2025-09-08

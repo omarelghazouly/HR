@@ -1,0 +1,173 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SendToHR" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:b="clr-namespace:BlankProcess14;assembly=DataService.BlankProcess14" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="cvPath" Type="InArgument(x:String)" />
+    <x:Property Name="in_Applicant" Type="InArgument(b:jobApplicationForm)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>SendToHR_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>BlankProcess14</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Platform</x:String>
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>UiPath.DataService.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>DataService.BlankProcess14</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SendToHR" sap:VirtualizedContainerService.HintSize="885.2,684.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uda:UpdateEntityRecord x:TypeArguments="b:jobApplicationForm" InputEntity="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="40d92072-df8b-f011-a136-6045bdd16340" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="449.6,257.6" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new BlankProcess14.jobApplicationForm() With {  .status = &quot;Sent to HR&quot;, .Id = in_Applicant.Id }]" IsInRecordView="False" RecordId="[in_Applicant.Id]" TimeoutInMs="30000">
+      <uda:UpdateEntityRecord.State>
+        <udam:RecordState>
+          <udam:RecordState.SelectedFields>
+            <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="1">
+              <udam:DynamicEntityField Id="ca81ed24-048c-f011-a136-6045bdd16340" Name="status">
+                <udam:DynamicEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">Sent to HR</InArgument>
+                </udam:DynamicEntityField.ArgumentValue>
+              </udam:DynamicEntityField>
+            </scg:List>
+          </udam:RecordState.SelectedFields>
+        </udam:RecordState>
+      </uda:UpdateEntityRecord.State>
+    </uda:UpdateEntityRecord>
+    <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" Body="[String.Format(&#xD;&#xA;&quot;&lt;html&gt;&lt;body style='font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#1a1a1a;line-height:1.5'&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;p&gt;Dear HR,&lt;/p&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;p&gt;Please review the following application:&lt;/p&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;table cellpadding='6' cellspacing='0' style='border-collapse:collapse;background:#f8fafc;border:1px solid #e5e7eb'&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;tr&gt;&lt;td style='font-weight:bold;border-bottom:1px solid #e5e7eb'&gt;Application #&lt;/td&gt;&lt;td style='border-bottom:1px solid #e5e7eb'&gt;{0}&lt;/td&gt;&lt;/tr&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;tr&gt;&lt;td style='font-weight:bold;border-bottom:1px solid #e5e7eb'&gt;Name&lt;/td&gt;&lt;td style='border-bottom:1px solid #e5e7eb'&gt;{1}&lt;/td&gt;&lt;/tr&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;tr&gt;&lt;td style='font-weight:bold;border-bottom:1px solid #e5e7eb'&gt;Email&lt;/td&gt;&lt;td style='border-bottom:1px solid #e5e7eb'&gt;{2}&lt;/td&gt;&lt;/tr&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;tr&gt;&lt;td style='font-weight:bold;border-bottom:1px solid #e5e7eb'&gt;Phone&lt;/td&gt;&lt;td style='border-bottom:1px solid #e5e7eb'&gt;{3}&lt;/td&gt;&lt;/tr&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;tr&gt;&lt;td style='font-weight:bold;border-bottom:1px solid #e5e7eb'&gt;Age&lt;/td&gt;&lt;td style='border-bottom:1px solid #e5e7eb'&gt;{4}&lt;/td&gt;&lt;/tr&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;tr&gt;&lt;td style='font-weight:bold'&gt;Job Title&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;/table&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;p&gt;The candidate&amp;rsquo;s CV is attached.&lt;/p&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;!-- Machine-readable block for robots --&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;pre style='display:none'&gt;APP_NUMBER:{0}&quot; &amp; vbLf &amp;&#xD;&#xA;&quot;NAME:{1}&quot; &amp; vbLf &amp;&#xD;&#xA;&quot;EMAIL:{2}&quot; &amp; vbLf &amp;&#xD;&#xA;&quot;PHONE:{3}&quot; &amp; vbLf &amp;&#xD;&#xA;&quot;AGE:{4}&quot; &amp; vbLf &amp;&#xD;&#xA;&quot;JOB_TITLE:{5}&lt;/pre&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;/body&gt;&lt;/html&gt;&quot;,&#xD;&#xA;in_Applicant.applicationNumber,&#xD;&#xA;in_Applicant.fullName,&#xD;&#xA;in_Applicant.email,&#xD;&#xA;in_Applicant.phone,&#xD;&#xA;CInt(in_Applicant.age).ToString(),&#xD;&#xA;in_Applicant.jobTitle)]" ConnectionId="54baf92f-3590-40e2-8fdf-b30a713283f4" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="449.6,404" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[&quot;Application &quot; &amp; in_Applicant.applicationNumber]" To="[New String(){&quot;omarghazoulyhr@gmail.com&quot;}]" UseConnectionService="True">
+      <uga:SendEmailConnections.ArgumentAttachments>
+        <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
+          <InArgument x:TypeArguments="upr:IResource">[LocalResource.FromPath(cvPath)]</InArgument>
+        </scg:List>
+      </uga:SendEmailConnections.ArgumentAttachments>
+      <uga:SendEmailConnections.AttachmentsBackup>
+        <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="Builder">
+          <usau:BackupSlot.BackupValues>
+            <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
+              <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)">[attachements]</InArgument>
+            </scg:List>
+            <scg:List x:TypeArguments="x:Object" x:Key="Builder" Capacity="1">
+              <x:Null />
+            </scg:List>
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:SendEmailConnections.AttachmentsBackup>
+      <uga:SendEmailConnections.InputTypeBackup>
+        <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+          <usau:BackupSlot.BackupValues>
+            <scg:List x:TypeArguments="x:Object" x:Key="HTML" Capacity="1">
+              <InArgument x:TypeArguments="x:String">["" &amp; "Dear HR," &amp; "Please review the following application:" &amp; "" &amp; "Application #: " &amp; in_Applicant.applicationNumber &amp; "" &amp; "Name: " &amp; in_Applicant.fullName &amp; "" &amp; "Email: " &amp; in_Applicant.email &amp; "" &amp; "Phone: " &amp; in_Applicant.phone &amp; "" &amp; "Age: " &amp; in_Applicant.age.ToString() &amp; "" &amp; "Job Title: " &amp; in_Applicant.jobTitle &amp; "" &amp; "" &amp; "The candidate\u2019s CV is attached." &amp; ""]</InArgument>
+            </scg:List>
+            <scg:List x:TypeArguments="x:Object" x:Key="TEXT" Capacity="1">
+              <x:Null />
+            </scg:List>
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:SendEmailConnections.InputTypeBackup>
+    </uga:SendEmailConnections>
+  </Sequence>
+</Activity>
