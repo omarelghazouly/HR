@@ -107,7 +107,7 @@
         <OutArgument x:TypeArguments="x:String">[destPath]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">["D:\Downloads D\CVs\"+in_Applicant.applicationNumber+".pdf"]</InArgument>
+        <InArgument x:TypeArguments="x:String">["C:\Users\trainee9\Desktop\CVs\"+in_Applicant.applicationNumber+".pdf"]</InArgument>
       </Assign.Value>
     </Assign>
     <ucas:DownloadStorageFile TimeoutMS="{x:Null}" Destination="[destPath]" DisplayName="Download Storage File" sap:VirtualizedContainerService.HintSize="449.6,166.4" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1" Path="[in_Applicant.applicationNumber+&quot;.pdf&quot;]" StorageBucketName="hr-cv-bucket" />

@@ -116,7 +116,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ProcessApplicant" sap:VirtualizedContainerService.HintSize="885.2,2358.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ProcessApplicant" sap:VirtualizedContainerService.HintSize="885.2,2258.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="is_Match" />
       <Variable x:TypeArguments="sd:DataSet" Name="dataSetFromCV" />
@@ -173,7 +173,7 @@
         <InArgument x:TypeArguments="sd:DataSet" x:Key="dataSetFromCV">[dataSetFromCV]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <If Condition="[is_Match]" sap:VirtualizedContainerService.HintSize="468.8,1292" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[is_Match]" sap:VirtualizedContainerService.HintSize="468.8,1192" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,227.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -190,7 +190,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="467.2,935.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="467.2,835.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="variable1" />
           </Sequence.Variables>
@@ -207,7 +207,7 @@
               <InArgument x:TypeArguments="x:String">omarelghazouly0@gmail.com</InArgument>
             </Assign.Value>
           </Assign>
-          <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" ConnectionId="ca1d83b4-f97f-4bd7-91d0-74f89b540079" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,512.8" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Application Review – Discrepancies Found in Your Submission" To="[New String(){&quot;omarelghazouly0@gmail.com&quot;}]" UseConnectionService="True">
+          <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[&quot;&lt;div style=&quot;&quot;font-family:Segoe UI,Arial,sans-serif; font-size:14px; color:#222;&quot;&quot;&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;p&gt;Dear &quot; &amp; in_Applicant.fullName &amp; &quot;,&lt;/p&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;p&gt;Thank you for your interest in the &lt;b&gt;&quot; &amp; in_Applicant.jobTitle &amp; &quot;&lt;/b&gt; position at &lt;b&gt;GSS – Global for Smart Solutions&lt;/b&gt;.&lt;/p&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;p&gt;During the review of your application, we noticed some discrepancies between the information you provided in the application form and the details in your CV. Because of these inconsistencies, we are unable to proceed with your application at this stage.&lt;/p&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;p&gt;If this was a mistake and you would like to resubmit your application with corrected details, please feel free to do so and we will gladly review it again.&lt;/p&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;br&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;p&gt;Kind regards,&lt;/p&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;p&gt;&lt;b&gt;Omar ElGhazouly&lt;/b&gt;&lt;br&gt;HR Manager&lt;br&gt;GSS – Global for Smart Solutions&lt;/p&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;hr style=&quot;&quot;border:none;border-top:1px solid #eee;margin:20px 0;&quot;&quot;&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;p style=&quot;&quot;font-size:12px; color:#777;&quot;&quot;&gt;This message was sent automatically by the GSS Recruitment System.&lt;br&gt;Please do not reply directly to this email.&lt;br&gt;Ref: &quot; &amp; in_Applicant.applicationNumber &amp; &quot;&lt;/p&gt;&quot; &amp;&#xD;&#xA;&quot;&lt;/div&gt;&quot;]" ConnectionId="ca1d83b4-f97f-4bd7-91d0-74f89b540079" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,412.8" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Application Review – Discrepancies Found in Your Submission" To="[New String(){&quot;omarelghazouly0@gmail.com&quot;}]" UseConnectionService="True">
             <uga:SendEmailConnections.AttachmentsBackup>
               <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
                 <usau:BackupSlot.BackupValues>
@@ -215,13 +215,15 @@
                 </usau:BackupSlot.BackupValues>
               </usau:BackupSlot>
             </uga:SendEmailConnections.AttachmentsBackup>
-            <uga:SendEmailConnections.Body>
-              <InArgument x:TypeArguments="x:String" />
-            </uga:SendEmailConnections.Body>
             <uga:SendEmailConnections.InputTypeBackup>
               <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
                 <usau:BackupSlot.BackupValues>
-                  <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+                  <scg:List x:TypeArguments="x:Object" x:Key="HTML" Capacity="1">
+                    <x:Null />
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:Object" x:Key="TEXT" Capacity="1">
+                    <x:Null />
+                  </scg:List>
                 </usau:BackupSlot.BackupValues>
               </usau:BackupSlot>
             </uga:SendEmailConnections.InputTypeBackup>

@@ -160,7 +160,7 @@
         <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
           <usau:BackupSlot.BackupValues>
             <scg:List x:TypeArguments="x:Object" x:Key="HTML" Capacity="1">
-              <InArgument x:TypeArguments="x:String">["" &amp; "Dear HR," &amp; "Please review the following application:" &amp; "" &amp; "Application #: " &amp; in_Applicant.applicationNumber &amp; "" &amp; "Name: " &amp; in_Applicant.fullName &amp; "" &amp; "Email: " &amp; in_Applicant.email &amp; "" &amp; "Phone: " &amp; in_Applicant.phone &amp; "" &amp; "Age: " &amp; in_Applicant.age.ToString() &amp; "" &amp; "Job Title: " &amp; in_Applicant.jobTitle &amp; "" &amp; "" &amp; "The candidate\u2019s CV is attached." &amp; ""]</InArgument>
+              <InArgument x:TypeArguments="x:String" />
             </scg:List>
             <scg:List x:TypeArguments="x:Object" x:Key="TEXT" Capacity="1">
               <x:Null />
